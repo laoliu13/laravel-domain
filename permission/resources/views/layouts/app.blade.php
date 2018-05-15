@@ -70,7 +70,11 @@
                 </div>
             </div>
         </nav>
-
+        @if (Session::get('success'))
+            <div class="alert alert-sucess">
+                <p>{{ Session::get('success') }}</p>
+            </div>
+        @endif
         @yield('content')
     </div>
 
